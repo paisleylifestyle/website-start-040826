@@ -1,34 +1,52 @@
-# Paisley Lifestyle — Build 1
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paisley Lifestyle | Our Story</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="our-story">
+    <div id="site-header-mount"></div>
 
-Static multi-page website starter for Netlify.
+    <main>
+      <section class="page-intro">
+        <div>
+          <p class="eyebrow">Our Story</p>
+          <h2 class="page-title">A dedicated page ready for your brand origin and meaning.</h2>
+        </div>
+        <p class="lead">This page is set aside for the history behind Paisley Lifestyle, why the name matters, and the symbolism or inspiration you want to share.</p>
+      </section>
 
-## Files
-- `index.html`
-- `our-story.html`
-- `contact.html`
-- `experience.html`
-- `co-create.html`
-- `header.html` shared header loaded on every page
-- `styles.css`
-- `script.js`
-- `assets/logo-placeholder.svg`
+      <section class="placeholder-grid">
+        <article class="placeholder-card">
+          <div>
+            <p class="placeholder-tag">Placeholder</p>
+            <h3>The Name</h3>
+            <p>Add the story behind the brand and what Paisley represents.</p>
+          </div>
+        </article>
+        <article class="placeholder-card">
+          <div>
+            <p class="placeholder-tag">Placeholder</p>
+            <h3>The Motif</h3>
+            <p>Use this for the history of the paisley pattern, symbolism, or artistic influence.</p>
+          </div>
+        </article>
+        <article class="placeholder-card">
+          <div>
+            <p class="placeholder-tag">Placeholder</p>
+            <h3>The Vision</h3>
+            <p>Describe the atmosphere, values, and world you want guests to step into.</p>
+          </div>
+        </article>
+      </section>
+    </main>
 
-## Replace the logo
-1. Add your logo file into `assets/`
-2. Rename it to `logo-placeholder.svg` **or** update the image path inside `header.html`
+    <footer class="site-footer">
+      <div class="footer-line footer-note">Shared header remains identical across all pages.</div>
+    </footer>
 
-## Deploy to GitHub + Netlify
-1. Create a new GitHub repo
-2. Upload all files from this folder to the repo root
-3. In Netlify, choose **Add new site** → **Import from Git**
-4. Select the repo
-5. Build command: leave blank
-6. Publish directory: `.`
-7. Deploy
-
-## Notes
-- Colors already set:
-  - Header: `#510f0d`
-  - Site background: `#f1ede7`
-- Header is shared across all pages.
-- Build 1 only contains structure and placeholder content.
+    <script src="script.js"></script>
+  </body>
+</html>

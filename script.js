@@ -1,21 +1,34 @@
-async function loadSharedHeader() {
-  const target = document.getElementById('site-header-mount');
-  if (!target) return;
+# Paisley Lifestyle — Build 1
 
-  try {
-    const response = await fetch('header.html');
-    const html = await response.text();
-    target.innerHTML = html;
+Static multi-page website starter for Netlify.
 
-    const currentPage = document.body.dataset.page;
-    document.querySelectorAll('.nav-link[data-page]').forEach((link) => {
-      if (link.dataset.page === currentPage) {
-        link.classList.add('active');
-      }
-    });
-  } catch (error) {
-    console.error('Header failed to load.', error);
-  }
-}
+## Files
+- `index.html`
+- `our-story.html`
+- `contact.html`
+- `experience.html`
+- `co-create.html`
+- `header.html` shared header loaded on every page
+- `styles.css`
+- `script.js`
+- `assets/logo-placeholder.svg`
 
-document.addEventListener('DOMContentLoaded', loadSharedHeader);
+## Replace the logo
+1. Add your logo file into `assets/`
+2. Rename it to `logo-placeholder.svg` **or** update the image path inside `header.html`
+
+## Deploy to GitHub + Netlify
+1. Create a new GitHub repo
+2. Upload all files from this folder to the repo root
+3. In Netlify, choose **Add new site** → **Import from Git**
+4. Select the repo
+5. Build command: leave blank
+6. Publish directory: `.`
+7. Deploy
+
+## Notes
+- Colors already set:
+  - Header: `#510f0d`
+  - Site background: `#f1ede7`
+- Header is shared across all pages.
+- Build 1 only contains structure and placeholder content.
