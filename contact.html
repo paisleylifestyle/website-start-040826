@@ -1,52 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Paisley Lifestyle | Co-create</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body data-page="co-create">
-    <div id="site-header-mount"></div>
-
-    <main>
-      <section class="page-intro">
-        <div>
-          <p class="eyebrow">Co-create</p>
-          <h2 class="page-title">A page for collaborations, partnerships, and creative co-hosting.</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Co-Create | Paisley Lifestyle</title>
+  <meta name="description" content="Co-create with Paisley Lifestyle." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <button class="mobile-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-mobile-toggle>
+        <span></span>
+      </button>
+      <div class="nav-shell" data-nav-shell>
+        <div class="nav-shell-inner">
+          <nav class="nav-group left">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="experience.html">Experience</a>
+            <a class="nav-link active" href="co-create.html">Co-Create</a>
+          </nav>
+          <nav class="nav-group right">
+            <a class="nav-link" href="story.html">The Story</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+          </nav>
         </div>
-        <p class="lead">Use this page for brands, venues, communities, photographers, florists, or other collaborators you want to invite into the world of Paisley Lifestyle.</p>
-      </section>
+      </div>
+      <a class="brand-lockup" href="index.html" aria-label="Paisley Lifestyle home">
+        <img src="assets/mainlogo.png" alt="Paisley Lifestyle logo placeholder" />
+        <div class="brand-lockup-text">
+          <div class="brand-top">Paisley</div>
+          <div class="brand-bottom">Lifestyle</div>
+        </div>
+      </a>
+    </div>
+  </header>
 
-      <section class="placeholder-grid">
-        <article class="placeholder-card">
-          <div>
-            <p class="placeholder-tag">Placeholder</p>
-            <h3>For Brands</h3>
-            <p>Add partnership positioning, audience fit, and experiential collaboration ideas.</p>
-          </div>
-        </article>
-        <article class="placeholder-card">
-          <div>
-            <p class="placeholder-tag">Placeholder</p>
-            <h3>For Creatives</h3>
-            <p>Use this for stylists, photographers, artists, and makers who may want to work with you.</p>
-          </div>
-        </article>
-        <article class="placeholder-card">
-          <div>
-            <p class="placeholder-tag">Placeholder</p>
-            <h3>For Venues</h3>
-            <p>Reserve this for venue hosts, properties, and spatial collaborations.</p>
-          </div>
-        </article>
-      </section>
-    </main>
+  <main>
+    <section class="page-intro co-create-hero">
+      <div class="container">
+        <h1 class="page-heading maroon-gradient">Co-Create</h1>
+        <p class="page-lead">Thoughtfully designed collaborations for brands, creatives, and partners who value atmosphere, beauty, and meaningful interaction.</p>
+      </div>
+    </section>
 
-    <footer class="site-footer">
-      <div class="footer-line footer-note">Designed so this page can later become your collaboration entry point.</div>
-    </footer>
+    <section class="section">
+      <div class="container cta-panels">
+        <article class="card">
+          <div class="kicker">For brands</div>
+          <h2 class="section-title" style="font-size:2rem;">Be experienced, not simply seen.</h2>
+          <p>We integrate brands into intimate, highly considered settings where interaction feels natural, memorable, and aligned with a discerning audience.</p>
+        </article>
+        <article class="card">
+          <div class="kicker">For creatives</div>
+          <h2 class="section-title" style="font-size:2rem;">Create something beautiful together.</h2>
+          <p>From stylists and artists to photographers, hosts, and experience-led collaborators, we welcome partnerships that add depth, beauty, and intention.</p>
+        </article>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
-  </body>
+    <section class="section">
+      <div class="container editorial-grid">
+        <div class="copy-panel">
+          <div class="kicker">Collaboration approach</div>
+          <h2 class="section-title">Designed with alignment in mind.</h2>
+          <p class="section-text">Every collaboration is shaped around brand fit, audience resonance, and aesthetic integrity. The goal is not visibility for its own sake — it is presence that feels elevated, organic, and lasting.</p>
+          <div style="margin-top:24px;">
+            <a class="button" href="contact.html">Start a Conversation</a>
+          </div>
+        </div>
+        <div class="image-placeholder" aria-label="Collaboration image placeholder"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>Paisley Lifestyle</div>
+      <div>Luxury collaborations with editorial restraint.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>

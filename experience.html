@@ -1,56 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Paisley Lifestyle | Contact</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body data-page="contact">
-    <div id="site-header-mount"></div>
-
-    <main>
-      <section class="page-intro">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2 class="page-title">A contact page structure for inquiries, collaborations, and private requests.</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Paisley Lifestyle</title>
+  <meta name="description" content="Connect with Paisley Lifestyle." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <button class="mobile-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-mobile-toggle>
+        <span></span>
+      </button>
+      <div class="nav-shell" data-nav-shell>
+        <div class="nav-shell-inner">
+          <nav class="nav-group left">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="experience.html">Experience</a>
+            <a class="nav-link" href="co-create.html">Co-Create</a>
+          </nav>
+          <nav class="nav-group right">
+            <a class="nav-link" href="story.html">The Story</a>
+            <a class="nav-link active" href="contact.html">Contact</a>
+          </nav>
         </div>
-        <ul class="contact-list">
-          <li><strong>Email</strong> hello@yourdomain.com</li>
-          <li><strong>Instagram</strong> @yourhandle</li>
-          <li><strong>Location</strong> Add your city or region</li>
-        </ul>
-      </section>
+      </div>
+      <a class="brand-lockup" href="index.html" aria-label="Paisley Lifestyle home">
+        <img src="assets/mainlogo.png" alt="Paisley Lifestyle logo placeholder" />
+        <div class="brand-lockup-text">
+          <div class="brand-top">Paisley</div>
+          <div class="brand-bottom">Lifestyle</div>
+        </div>
+      </a>
+    </div>
+  </header>
 
-      <section class="placeholder-grid">
-        <article class="placeholder-card">
-          <div>
-            <p class="placeholder-tag">Placeholder</p>
-            <h3>General Inquiries</h3>
-            <p>Use for contact details, form embeds, or welcome copy.</p>
-          </div>
-        </article>
-        <article class="placeholder-card">
-          <div>
-            <p class="placeholder-tag">Placeholder</p>
-            <h3>Brand Partnerships</h3>
-            <p>Add sponsor, venue, or creative collaboration contact details here.</p>
-          </div>
-        </article>
-        <article class="placeholder-card">
-          <div>
-            <p class="placeholder-tag">Placeholder</p>
-            <h3>Private Events</h3>
-            <p>Reserve this for custom experience inquiries and curation requests.</p>
-          </div>
-        </article>
-      </section>
-    </main>
+  <main>
+    <section class="page-intro">
+      <div class="container">
+        <h1 class="page-heading maroon-gradient">Connect with Us</h1>
+        <p class="page-lead">We’d love to hear from you. Whether you’re looking to attend an experience, discuss a collaboration, or create something meaningful together, this is where the conversation begins.</p>
+      </div>
+    </section>
 
-    <footer class="site-footer">
-      <div class="footer-line footer-note">Replace the sample contact details when you are ready.</div>
-    </footer>
+    <section class="section">
+      <div class="container contact-layout">
+        <div class="info-panel">
+          <div class="kicker">Contact Details</div>
+          <h2 class="section-title">Begin here.</h2>
+          <div class="contact-list">
+            <div class="contact-item">
+              <span>Email</span>
+              <a href="mailto:paisleylifestyle.events@gmail.com">paisleylifestyle.events@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <span>Phone</span>
+              <a href="tel:+16694996143">6694996143</a>
+            </div>
+            <div class="contact-item">
+              <span>Instagram</span>
+              <a href="https://www.instagram.com/paisley.lifestyle/" target="_blank" rel="noreferrer">@paisley.lifestyle</a>
+            </div>
+          </div>
+        </div>
 
-    <script src="script.js"></script>
-  </body>
+        <div class="form-panel">
+          <div class="kicker">Contact Form</div>
+          <form name="paisley-contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="paisley-contact" />
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Full Name</label>
+                <input id="name" name="full-name" type="text" required />
+              </div>
+              <div class="field">
+                <label for="email">Email Address</label>
+                <input id="email" name="email-address" type="email" required />
+              </div>
+              <div class="field">
+                <label for="phone">Phone Number</label>
+                <input id="phone" name="phone-number" type="tel" />
+              </div>
+              <div class="field">
+                <label for="inquiry">Inquiry Type</label>
+                <select id="inquiry" name="inquiry-type" required>
+                  <option value="">Select an option</option>
+                  <option>Attend an Experience</option>
+                  <option>Curate a Private Experience</option>
+                  <option>Brand Collaboration</option>
+                  <option>Creative Collaboration</option>
+                  <option>General Inquiry</option>
+                </select>
+              </div>
+              <div class="field-full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <div class="field-full">
+                <button class="button" type="submit">Begin the Conversation</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>Paisley Lifestyle</div>
+      <div>For experiences, collaborations, and thoughtful conversation.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>

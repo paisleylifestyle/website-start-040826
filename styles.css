@@ -1,21 +1,81 @@
-async function loadSharedHeader() {
-  const target = document.getElementById('site-header-mount');
-  if (!target) return;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Story | Paisley Lifestyle</title>
+  <meta name="description" content="The story behind Paisley Lifestyle." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <button class="mobile-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-mobile-toggle>
+        <span></span>
+      </button>
+      <div class="nav-shell" data-nav-shell>
+        <div class="nav-shell-inner">
+          <nav class="nav-group left">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="experience.html">Experience</a>
+            <a class="nav-link" href="co-create.html">Co-Create</a>
+          </nav>
+          <nav class="nav-group right">
+            <a class="nav-link active" href="story.html">The Story</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </div>
+      <a class="brand-lockup" href="index.html" aria-label="Paisley Lifestyle home">
+        <img src="assets/mainlogo.png" alt="Paisley Lifestyle logo placeholder" />
+        <div class="brand-lockup-text">
+          <div class="brand-top">Paisley</div>
+          <div class="brand-bottom">Lifestyle</div>
+        </div>
+      </a>
+    </div>
+  </header>
 
-  try {
-    const response = await fetch('header.html');
-    const html = await response.text();
-    target.innerHTML = html;
+  <main>
+    <section class="page-intro">
+      <div class="container">
+        <h1 class="page-heading maroon-gradient">The Story</h1>
+      </div>
+    </section>
 
-    const currentPage = document.body.dataset.page;
-    document.querySelectorAll('.nav-link[data-page]').forEach((link) => {
-      if (link.dataset.page === currentPage) {
-        link.classList.add('active');
-      }
-    });
-  } catch (error) {
-    console.error('Header failed to load.', error);
-  }
-}
+    <section class="section">
+      <div class="container story-layout">
+        <div class="image-placeholder" aria-label="Brand story image placeholder"></div>
+        <div class="story-copy copy-panel">
+          <p><strong>Paisley Lifestyle is inspired by the paisley motif — a symbol that has traveled across centuries, cultures, and forms of expression.</strong></p>
+          <p><strong>Its origins trace back over 2,000 years to ancient Persia, where a teardrop-shaped symbol known as boteh represented life, eternity, and renewal.</strong> The form echoed nature: a young cypress tree bent by the wind, a flame, or a seed in motion. It was not decorative excess — it was symbolic elegance.</p>
+          <p><strong>It later evolved in Kashmir through exquisite handwoven textiles, and eventually reached Europe, where it became known as paisley</strong> — a mark of refinement and cultivated taste.</p>
+          <p><strong>At Paisley Lifestyle, we draw from this philosophy.</strong></p>
+          <p><strong>We believe refinement should feel natural, not rigid.<br />And every detail should contribute to a deeper experience.</strong></p>
+        </div>
+      </div>
+    </section>
 
-document.addEventListener('DOMContentLoaded', loadSharedHeader);
+    <section class="section">
+      <div class="container copy-panel what-we-do">
+        <div class="kicker">What we do</div>
+        <h2 class="section-title">What we do</h2>
+        <p class="section-text"><strong>We create curated gatherings designed to feel intentional, aesthetically refined, and socially effortless.</strong></p>
+        <p class="section-text"><strong>For our guests, this means spaces that invite connection</strong> — where atmosphere, conversation, and detail come together in a way that feels both elevated and at ease.</p>
+        <p class="section-text"><strong>For brands, it is an opportunity to be experienced rather than simply seen</strong> — integrated into thoughtfully designed environments where interaction feels organic, memorable, and aligned with a discerning audience.</p>
+        <p class="section-text"><strong>From intimate experiences to collaborative brand moments, everything we create is guided by the same principle:</strong></p>
+        <p class="section-text"><strong>to design spaces that feel beautiful, considered, and unforgettable.</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>Paisley Lifestyle</div>
+      <div>Rooted in symbolism, shaped into experience.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
